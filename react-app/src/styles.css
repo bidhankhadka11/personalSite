@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  position: relative;
+  background-image: url("https://i.imgur.com/Zk6TR5k.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
