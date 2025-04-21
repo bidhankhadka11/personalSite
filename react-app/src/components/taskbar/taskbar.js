@@ -26,6 +26,15 @@ const getTime = () => {
 
 const Taskbar = () => {
     const [time, setTime] = useState(getTime)
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+          setTime(getTime());
+        }, 1000);
+    
+        return () => clearInterval(interval); // cleanup
+      }, []);
+
     return(
         <div className={styles.taskbar}>
             <div className={styles.startbtn}>
