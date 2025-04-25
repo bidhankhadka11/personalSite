@@ -2,14 +2,41 @@ import "xp.css/dist/XP.css";
 import Draggable from "react-draggable"
 import ReactDOM from "react-dom"
 import "./styles.css";
-import Taskbar from "./components/taskbar/taskbar";
 import React, {useRef} from "react";
+
+import Taskbar from "./components/taskbar/taskbar";
+import DesktopIcon from "./components/DesktopIcon/DesktopIcon";
+
+import mycomputer from "../src/assets/mycomputer.png"
+import resume from "../src/assets/pdf.png"
 
 function App() {
   const nodeRef = useRef(null)
   const a = "My first program"
-  return (
+
+  const handleOpenResume = () => {
+    window.open("./Resume.pdf")
+  }
+
+  return ( 
     <div className="App">
+      <div
+        className="icons"
+      >
+        <DesktopIcon 
+          title = "My Computer"
+          img = {mycomputer}
+          appId = {1}
+        />
+
+        <DesktopIcon 
+          title = "Resume"
+          img = {resume}
+          appId = {2}
+          doubleClick={handleOpenResume}
+        />
+
+      </div>
 
       <Draggable handle="strong" nodeRef={nodeRef}>
         <span ref={nodeRef}>

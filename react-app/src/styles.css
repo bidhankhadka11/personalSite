@@ -18,3 +18,15 @@
   overflow: hidden;
   width: 100%;
 }
+
+header {
+  position: absolute;
+}
+
+.icons {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}

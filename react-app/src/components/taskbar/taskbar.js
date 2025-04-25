@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import styles from './taskbar.module.css'
+import styles from './taskbar.css'
+
 import greenshield from "../../assets/green_shield.png";
 import internet from "../../assets/internet.png";
 import sound from "../../assets/sound.png";
@@ -36,12 +37,12 @@ const Taskbar = () => {
       }, []);
 
     return(
-        <div className={styles.taskbar}>
-            <div className={styles.startbtn}>
+        <div className='taskbar'>
+            <div className='startbtn'>
             </div>
 
-            <div className={styles.icontray}>
-                <div className={styles.iconrow}>
+            <div className='icontray'>
+                <div className='iconrow'>
                     <img 
                     width={15}
                     style={{ margin: "0px 3px 0px 3px" }}
